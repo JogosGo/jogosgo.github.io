@@ -37,27 +37,28 @@
     .title {
       font-size: 24px;
     }
-    .icon-group {
+    .discord-badge {
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
+      background-color: #7289DA;
+      padding: 10px;
+      border-radius: 5px;
+      margin-left: 20px;
     }
-    .icon-link {
-      display: inline-block;
-      width: 100px;
-      height: 100px;
-      margin: 10px;
-      transition: transform 0.2s, opacity 0.2s;
+    .discord-logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
     }
-    .icon-link img {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
+    .discord-info {
+      color: white;
     }
-    .icon-link img:hover {
-      transform: scale(1.1);
+    .discord-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .discord-description {
+      font-size: 14px;
     }
     .subscriber-count {
       margin-top: 20px;
@@ -94,6 +95,13 @@
       <img src="logo.png" alt="Jogos Go Logo">
     </div>
     <div class="title">Jogos Go</div>
+    <div class="discord-badge">
+      <img src="logo.png" alt="Jogos Go Logo" class="discord-logo">
+      <div class="discord-info">
+        <div class="discord-name">Jogos Go Discord</div>
+        <div class="discord-description">Join our Discord community!</div>
+      </div>
+    </div>
     <div class="subscriber-count">
       <iframe height="90px" width="100%" frameborder="0" src="https://socialcounts.org/youtube-live-subscriber-count/UCN53mD7dL_gu6efYoUy24dw/embed" allowFullScreen></iframe>
       <div class="support-text">Subscribe to support me!</div>
