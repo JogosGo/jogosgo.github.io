@@ -85,6 +85,38 @@
       padding: 20px;
       width: 100%;
     }
+    /* Style for the language switch button */
+    #languageButton {
+      background-color: #4CAF50; /* Green background */
+      border: none; /* Remove border */
+      color: white; /* White text */
+      padding: 10px 20px; /* Padding */
+      text-align: center; /* Center text */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Make it inline block */
+      font-size: 16px; /* Font size */
+      cursor: pointer; /* Cursor on hover */
+      border-radius: 5px; /* Rounded corners */
+      transition: background-color 0.3s; /* Smooth transition */
+    }
+    #languageButton:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+    /* Animation for text transition */
+    .text-transition {
+      animation: fadeInOut 0.5s ease forwards;
+    }
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
   </style>
   <script src="https://yvoschaap.com/ytpage/ytembed.js"></script>
 </head>
@@ -120,5 +152,40 @@
       </div>
     </div>
   </div>
+  <!-- Button for language switching -->
+  <button id="languageButton">Switch to Portuguese</button>
+  <!-- JavaScript for language switching -->
+  <script>
+    document.getElementById('languageButton').addEventListener('click', function() {
+      var currentLanguage = document.documentElement.lang || 'en';
+      if (currentLanguage === 'en') {
+        // Switch to Portuguese with animation
+        document.querySelector('.title').textContent = 'Jogos Go';
+        document.querySelector('.title').classList.add('text-transition');
+        document.querySelector('.support-text').textContent = '🍪 Inscreva-se para um cookie :3 🍪';
+        document.querySelector('.support-text').classList.add('text-transition');
+        document.querySelector('.description').textContent = 'Olá!, Eu sou o Jogos Go! Um YouTuber e programador. Eu amo Undertale, Roblox e Minecraft.';
+        document.querySelector('.description').classList.add('text-transition');
+        document.getElementById('languageButton').textContent = 'Switch to English';
+        document.documentElement.lang = 'pt'; // Change language attribute of the HTML element
+      } else {
+        // Switch to English with animation
+        document.querySelector('.title').textContent = 'Jogos Go';
+        document.querySelector('.title').classList.add('text-transition');
+        document.querySelector('.support-text').textContent = '🍪 Subscribe for a cookie :3 🍪';
+        document.querySelector('.support-text').classList.add('text-transition');
+        document.querySelector('.description').textContent = 'Howdy!, I\'m Jogos Go! A YouTuber and coder. I love Undertale, Roblox, and Minecraft.';
+        document.querySelector('.description').classList.add('text-transition');
+        document.getElementById('languageButton').textContent = 'Switch to Portuguese';
+        document.documentElement.lang = 'en'; // Change language attribute of the HTML element
+      }
+      // Remove animation classes after animation completes
+      setTimeout(function() {
+        document.querySelector('.title').classList.remove('text-transition');
+        document.querySelector('.support-text').classList.remove('text-transition');
+        document.querySelector('.description').classList.remove('text-transition');
+      }, 500);
+    });
+  </script>
 </body>
 </html>
