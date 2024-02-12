@@ -143,7 +143,8 @@
     </div>
   </div>
   <div class="description">
-    Howdy!, I'm Jogos Go! A YouTuber and coder. I love Undertale, Roblox, and Minecraft.
+    Howdy!, I'm Jogos Go! A YouTuber! I Like Games like Undertale, Minecraft, Roblox, Fnaf and More!
+    I'm in a Family Called "Eclypse Family". Welcome to the Channel! I Hope You Like It!
   </div>
   <div class="content">
     <div class="projects">
@@ -166,37 +167,38 @@
   <!-- Button for language switching -->
   <button id="languageButton">Switch to Portuguese</button>
   <!-- JavaScript for language switching -->
-  <script>
-    document.getElementById('languageButton').addEventListener('click', function() {
-      var currentLanguage = document.documentElement.lang || 'en';
-      if (currentLanguage === 'en') {
-        // Switch to Portuguese with animation
-        document.querySelector('.title').textContent = 'Jogos Go';
-        document.querySelector('.title').classList.add('text-transition');
-        document.querySelector('.support-text').textContent = '🍪 Inscreva-se para um cookie :3 🍪';
-        document.querySelector('.support-text').classList.add('text-transition');
-        document.querySelector('.description').textContent = 'Olá!, Eu sou o Jogos Go! Um YouTuber e programador. Eu amo Undertale, Roblox e Minecraft.';
-        document.querySelector('.description').classList.add('text-transition');
-        document.getElementById('languageButton').textContent = 'Switch to English';
-        document.documentElement.lang = 'pt'; // Change language attribute of the HTML element
-      } else {
-        // Switch to English with animation
-        document.querySelector('.title').textContent = 'Jogos Go';
-        document.querySelector('.title').classList.add('text-transition');
-        document.querySelector('.support-text').textContent = '🍪 Subscribe for a cookie :3 🍪';
-        document.querySelector('.support-text').classList.add('text-transition');
-        document.querySelector('.description').textContent = 'Howdy!, I\'m Jogos Go! A YouTuber and coder. I love Undertale, Roblox, and Minecraft.';
-        document.querySelector('.description').classList.add('text-transition');
-        document.getElementById('languageButton').textContent = 'Switch to Portuguese';
-        document.documentElement.lang = 'en'; // Change language attribute of the HTML element
-      }
-      // Remove animation classes after animation completes
-      setTimeout(function() {
-        document.querySelector('.title').classList.remove('text-transition');
-        document.querySelector('.support-text').classList.remove('text-transition');
-        document.querySelector('.description').classList.remove('text-transition');
-      }, 500);
-    });
-  </script>
+<script>
+  document.getElementById('languageButton').addEventListener('click', function() {
+    var currentLanguage = document.documentElement.lang || 'en';
+    if (currentLanguage === 'en') {
+      // Switch to Portuguese with animation
+      document.querySelector('.title').textContent = 'Jogos Go';
+      document.querySelector('.title').classList.add('text-transition');
+      document.querySelector('.support-text').textContent = '🍪 Inscreva-se para um cookie :3 🍪';
+      document.querySelector('.support-text').classList.add('text-transition');
+      document.querySelector('.description').textContent = 'Howdy!, Eu sou o Jogos Go! Um YouTuber! Eu gosto de jogos como Undertale, Minecraft, Roblox, Fnaf e mais! Estou em uma família chamada "Eclypse Family". Bem-vindo ao canal! Espero que goste!';
+      document.querySelector('.description').classList.add('text-transition');
+      document.getElementById('languageButton').textContent = 'Mudar para Inglês';
+      document.documentElement.lang = 'pt'; // Change language attribute of the HTML element
+    } else {
+      // Switch to English with animation
+      document.querySelector('.title').textContent = 'Jogos Go';
+      document.querySelector('.title').classList.add('text-transition');
+      document.querySelector('.support-text').textContent = '🍪 Subscribe for a cookie :3 🍪';
+      document.querySelector('.support-text').classList.add('text-transition');
+      document.querySelector('.description').textContent = 'Howdy!, I\'m Jogos Go! A YouTuber! I Like Games like Undertale, Minecraft, Roblox, Fnaf and More! I\'m in a Family Called "Eclypse Family". Welcome to the Channel! I Hope You Like It!';
+      document.querySelector('.description').classList.add('text-transition');
+      document.getElementById('languageButton').textContent = 'Mudar para Português';
+      document.documentElement.lang = 'en'; // Change language attribute of the HTML element
+    }
+    // Remove animation classes after animation completes
+    setTimeout(function() {
+      document.querySelector('.title').classList.remove('text-transition');
+      document.querySelector('.support-text').classList.remove('text-transition');
+      document.querySelector('.description').classList.remove('text-transition');
+    }, 500);
+  });
+</script>
 </body>
 </html>
+
