@@ -124,7 +124,7 @@
     <script>
         // Função para buscar o número de inscritos usando a API do YouTube
         function getSubscriberCount() {
-            fetch('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCJhccCAmr6LSIsJvMx0U-BA&key=SUA_CHAVE_DE_API_DO_YOUTUBE')
+            fetch('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCJhccCAmr6LSIsJvMx0U-BA&key=AIzaSyAOtDT-lUFQZYODpCAmkQHH5TfJ4305KQA')
             .then(response => response.json())
             .then(data => {
                 const subscriberCount = data.items[0].statistics.subscriberCount;
@@ -135,7 +135,7 @@
 
         // Função para buscar o vídeo mais recente usando a API do YouTube
         function getLatestVideo() {
-            fetch('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCJhccCAmr6LSIsJvMx0U-BA&maxResults=1&type=video&key=SUA_CHAVE_DE_API_DO_YOUTUBE')
+            fetch('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCJhccCAmr6LSIsJvMx0U-BA&maxResults=1&type=video&key=AIzaSyAOtDT-lUFQZYODpCAmkQHH5TfJ4305KQA')
             .then(response => response.json())
             .then(data => {
                 const latestVideoId = data.items[0].id.videoId;
