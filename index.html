@@ -1,205 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogos Go</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-image: url("wallpaper.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #333;
-    }
-    .header {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 10px;
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    .logo {
-      width: 80px;
-      height: 80px;
-    }
-    .logo img {
-      width: 100%;
-      height: auto;
-    }
-    .title {
-      font-size: 24px;
-    }
-    .icon-group {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .icon-link {
-      display: inline-block;
-      width: 100px;
-      height: 100px;
-      margin: 10px;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .icon-link img {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-    }
-    .icon-link img:hover {
-      transform: scale(1.1);
-    }
-    .subscriber-count {
-      margin-top: 20px;
-    }
-    .subscriber-count iframe {
-      width: 100%;
-      max-width: 310px;
-      height: auto;
-      border: none;
-    }
-    .support-text {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-    .description {
-      text-align: center;
-      margin-top: 20px;
-      padding: 0 20px;
-      font-size: 18px;
-    }
-    .projects {
-      margin-top: 20px;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      width: 100%;
-    }
-    /* Style for the language switch button */
-    #languageButton {
-      background-color: #4CAF50; /* Green background */
-      border: none; /* Remove border */
-      color: white; /* White text */
-      padding: 10px 20px; /* Padding */
-      text-align: center; /* Center text */
-      text-decoration: none; /* Remove underline */
-      display: inline-block; /* Make it inline block */
-      font-size: 16px; /* Font size */
-      cursor: pointer; /* Cursor on hover */
-      border-radius: 5px; /* Rounded corners */
-      transition: background-color 0.3s; /* Smooth transition */
-    }
-    #languageButton:hover {
-      background-color: #45a049; /* Darker green on hover */
-    }
-    /* Animation for text transition */
-    .text-transition {
-      animation: fadeInOut 0.5s ease forwards;
-    }
-    @keyframes fadeInOut {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-  </style>
-  <script src="https://yvoschaap.com/ytpage/ytembed.js"></script>
-  <script>
-    // Function to detect if the user is on a mobile device
-    function isMobileDevice() {
-      return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-    }
-
-    // Redirect to the mobile version if the user is on a mobile device
-    if (isMobileDevice()) {
-      window.location.href = 'mobile.html';
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Go - Canal do YouTube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('wallpaper.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons li {
+            margin: 0 10px;
+        }
+        .social-icons img {
+            width: 90px;
+            height: auto;
+        }
+        /* Estilos para ocultar todas as seções, exceto a inicial */
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <div class="logo">
-      <img src="logo.png" alt="Jogos Go Logo">
+    <header>
+        <div class="header-buttons">
+            <a href="#inicio" onclick="showSection('inicio')">Início</a>
+            <a href="#contato" onclick="showSection('contato')">Contato</a>
+        </div>
+        <h1>Bem-vindo ao Canal do YouTube Jogos Go</h1>
+    </header>
+    <div class="container">
+        <!-- Seção Início -->
+        <div id="inicio" class="section">
+            <h2>Sobre Mim</h2>
+            <p>Bem-vindo ao meu canal do YouTube! Eu sou Jogos Go, um gamer apaixonado que adora criar conteúdo sobre Undertale, Roblox, Minecraft e muito mais. Junte-se a mim nas minhas aventuras nos jogos!</p>
+
+            <h2>Último Vídeo</h2>
+            <div id="latest-video"></div>
+
+            <!-- Exibição do contador de inscritos -->
+            <div id="subscriber-count"></div>
+        </div>
+
+        <!-- Seção Contato -->
+        <div id="contato" class="section hidden">
+            <h2>Entre em Contato</h2>
+            <p>E-mail: <a href="mailto:jogosgo@proton.me">jogosgo@proton.me</a></p>
+            <p>Siga-me nas redes sociais:</p>
+            <ul class="social-icons">
+                <li><a href="https://www.youtube.com/@jogosgo"><img src="sub.png" alt="YouTube"></a></li>
+                <li><a href="https://www.instagram.com/jogosgo/"><img src="instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://tiktok.com/@jogosgoficial"><img src="tiktok.png" alt="TikTok"></a></li>
+                <li><a href="https://twitter.com/@jogosgo"><img src="twitter.png" alt="Twitter"></a></li>
+                <!-- Adicione links e ícones para suas outras redes sociais aqui -->
+            </ul>
+        </div>
     </div>
-    <div class="title">Jogos Go</div>
-    <div class="subscriber-count">
-      <iframe height="90px" width="100%" frameborder="0" src="https://socialcounts.org/youtube-live-subscriber-count/UCJhccCAmr6LSIsJvMx0U-BA/embed?style=img%7Bborder-radius%3A50%25%7D.title%7Bfont-size%3A25px%7D.odoParrent%7Bcolor%3A+rgba%2819%2C185%2C254%2C1%29%7D&odoDownColor=rgba%28255%2C0%2C13%2C1%29&odoUpColor=rgba%280%2C255%2C0%2C1%29" allowFullScreen></iframe>
-      <div class="support-text">🍪 Subscribe for a cookie :3 🍪</div>
-    </div>
-  </div>
-  <div class="description">
-    Howdy!, I'm Jogos Go! A YouTuber! I Like Games like Undertale, Minecraft, Roblox, Fnaf and More!
-    I'm in a Family Called "Eclypse Family". Welcome to the Channel! I Hope You Like It!
-  </div>
-  <div class="content">
-    <div class="projects">
-      <div class="icon-group">
-        <a href="https://github.com/JogosGo" class="icon-link" target="_blank">
-          <img src="github.png" alt="GitHub Logo">
-        </a>
-        <a href="https://www.discord.gg/Tynt5CbWpW" class="icon-link" target="_blank">
-          <img src="discord.png" alt="Discord Logo">
-        </a>
-        <a href="https://www.youtube.com/@jogosgo/featured" class="icon-link" target="_blank">
-          <img src="sub.png" alt="Subscribe Button">
-        </a>
-        <a href="https://github.com/JogosGo/Undertale-Save-Manger" class="icon-link" target="_blank">
-          <img src="save.png" alt="Save Button">
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- Button for language switching -->
-  <button id="languageButton">Switch to Portuguese</button>
-  <!-- JavaScript for language switching -->
-<script>
-  document.getElementById('languageButton').addEventListener('click', function() {
-    var currentLanguage = document.documentElement.lang || 'en';
-    if (currentLanguage === 'en') {
-      // Switch to Portuguese with animation
-      document.querySelector('.title').textContent = 'Jogos Go';
-      document.querySelector('.title').classList.add('text-transition');
-      document.querySelector('.support-text').textContent = '🍪 Inscreva-se para um cookie :3 🍪';
-      document.querySelector('.support-text').classList.add('text-transition');
-      document.querySelector('.description').textContent = 'Howdy!, Eu sou o Jogos Go! Um YouTuber! Eu gosto de jogos como Undertale, Minecraft, Roblox, Fnaf e mais! Estou em uma família chamada "Eclypse Family". Bem-vindo ao canal! Espero que goste!';
-      document.querySelector('.description').classList.add('text-transition');
-      document.getElementById('languageButton').textContent = 'Mudar para Inglês';
-      document.documentElement.lang = 'pt'; // Change language attribute of the HTML element
-    } else {
-      // Switch to English with animation
-      document.querySelector('.title').textContent = 'Jogos Go';
-      document.querySelector('.title').classList.add('text-transition');
-      document.querySelector('.support-text').textContent = '🍪 Subscribe for a cookie :3 🍪';
-      document.querySelector('.support-text').classList.add('text-transition');
-      document.querySelector('.description').textContent = 'Howdy!, I\'m Jogos Go! A YouTuber! I Like Games like Undertale, Minecraft, Roblox, Fnaf and More! I\'m in a Family Called "Eclypse Family". Welcome to the Channel! I Hope You Like It!';
-      document.querySelector('.description').classList.add('text-transition');
-      document.getElementById('languageButton').textContent = 'Mudar para Português';
-      document.documentElement.lang = 'en'; // Change language attribute of the HTML element
-    }
-    // Remove animation classes after animation completes
-    setTimeout(function() {
-      document.querySelector('.title').classList.remove('text-transition');
-      document.querySelector('.support-text').classList.remove('text-transition');
-      document.querySelector('.description').classList.remove('text-transition');
-    }, 500);
-  });
-</script>
+    
+    <footer>
+        &copy; 2024 Jogos Go - Todos os direitos reservados.
+    </footer>
+
+    <!-- Elemento de Tradução do Google -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        // Função para mostrar a seção correspondente ao clicar nos links
+        function showSection(sectionId) {
+            // Oculta todas as seções
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add('hidden');
+            }
+
+            // Mostra a seção correspondente ao ID do link clicado
+            var sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.remove('hidden');
+        }
+    </script>
+
+    <script>
+        // Função para buscar o número de inscritos usando a API do YouTube
+        function getSubscriberCount() {
+            fetch('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCJhccCAmr6LSIsJvMx0U-BA&key=SUA_CHAVE_DE_API_DO_YOUTUBE')
+            .then(response => response.json())
+            .then(data => {
+                const subscriberCount = data.items[0].statistics.subscriberCount;
+                document.getElementById('subscriber-count').innerText = `Inscritos: ${subscriberCount}`;
+            })
+            .catch(error => console.error('Erro ao buscar o número de inscritos:', error));
+        }
+
+        // Função para buscar o vídeo mais recente usando a API do YouTube
+        function getLatestVideo() {
+            fetch('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCJhccCAmr6LSIsJvMx0U-BA&maxResults=1&type=video&key=SUA_CHAVE_DE_API_DO_YOUTUBE')
+            .then(response => response.json())
+            .then(data => {
+                const latestVideoId = data.items[0].id.videoId;
+                document.getElementById('latest-video').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${latestVideoId}" frameborder="0" allowfullscreen></iframe>`;
+            })
+            .catch(error => console.error('Erro ao buscar o último vídeo:', error));
+        }
+
+        // Chame as funções para exibir o vídeo mais recente e o número de inscritos quando a página carregar
+        window.onload = function() {
+            getLatestVideo();
+            getSubscriberCount();
+        };
+    </script>
 </body>
 </html>
 
