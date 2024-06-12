@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    width: 100%;
+}
+
+.menu li {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.menu li:hover {
+    background-color: #444;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #1e1e1e;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.stat-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 24px;
+}
+
+.latest, .videos-section {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.latest-grid, .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.video-box {
+    background-color: #333;
+    width: calc(33.333% - 20px);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.video-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+.social {
+    background-color: #1e1e1e;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social img {
+    width: 100px; /* Increase width by 80% */
+    height: 25px; /* Keep height the same */
+}

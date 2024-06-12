@@ -1,155 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogos Go - Canal do YouTube</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('wallpaper.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .social-icons {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .social-icons li {
-            margin: 0 10px;
-        }
-        .social-icons img {
-            width: 90px;
-            height: auto;
-        }
-        /* Estilos para ocultar todas as seções, exceto a inicial */
-        .hidden {
-            display: none;
-        }
-    </style>
+    <title>Website Layout</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-buttons">
-            <a href="#inicio" onclick="showSection('inicio')">Início</a>
-            <a href="#contato" onclick="showSection('contato')">Contato</a>
-        </div>
-        <h1>Bem-vindo ao Canal do YouTube Jogos Go</h1>
-    </header>
     <div class="container">
-        <!-- Seção Início -->
-        <div id="inicio" class="section">
-            <h2>Sobre Mim</h2>
-            <p>Bem-vindo ao meu canal do YouTube! Eu sou Jogos Go, um gamer apaixonado que adora criar conteúdo sobre Undertale, Roblox, Minecraft e muito mais. Junte-se a mim nas minhas aventuras nos jogos!</p>
-
-            <h2>Último Vídeo</h2>
-            <div id="latest-video"></div>
-
-            <!-- Exibição do contador de inscritos -->
-            <div id="subscriber-count"></div>
-        </div>
-
-        <!-- Seção Contato -->
-        <div id="contato" class="section hidden">
-            <h2>Entre em Contato</h2>
-            <p>E-mail: <a href="mailto:jogosgo@proton.me">jogosgo@proton.me</a></p>
-            <p>Siga-me nas redes sociais:</p>
-            <ul class="social-icons">
-                <li><a href="https://www.youtube.com/@jogosgo"><img src="sub.png" alt="YouTube"></a></li>
-                <li><a href="https://www.instagram.com/jogosgo/"><img src="instagram.png" alt="Instagram"></a></li>
-                <li><a href="https://tiktok.com/@jogosgoficial"><img src="tiktok.png" alt="TikTok"></a></li>
-                <li><a href="https://twitter.com/@jogosgo"><img src="twitter.png" alt="Twitter"></a></li>
-                <!-- Adicione links e ícones para suas outras redes sociais aqui -->
+        <div class="sidebar">
+            <div class="profile-container">
+                <div class="profile-picture" id="profile-picture"></div>
+                <div class="profile-name" id="profile-name">Name</div>
+            </div>
+            <ul class="menu">
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#latest">Latest</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#social">Social</a></li>
             </ul>
         </div>
+        <div class="main-content">
+            <div id="stats" class="stats">
+                <div class="stat-box">
+                    <div class="stat-label">Subs</div>
+                    <div class="stat-value" id="subs">NUM</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Views</div>
+                    <div class="stat-value" id="views">NUM</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Videos</div>
+                    <div class="stat-value" id="videos-num">NUM</div>
+                </div>
+            </div>
+            <div id="latest" class="latest">
+                <h2>Latest</h2>
+                <div class="latest-grid" id="latest-grid">
+                    <!-- Latest videos will be injected here -->
+                </div>
+            </div>
+            <div id="videos" class="videos-section">
+                <h2>Videos</h2>
+                <div class="video-grid" id="video-grid">
+                    <!-- Video thumbnails will be injected here -->
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <footer>
-        &copy; 2024 Jogos Go - Todos os direitos reservados.
-    </footer>
-
-    <!-- Elemento de Tradução do Google -->
-    <div id="google_translate_element"></div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <script>
-        // Função para mostrar a seção correspondente ao clicar nos links
-        function showSection(sectionId) {
-            // Oculta todas as seções
-            var sections = document.getElementsByClassName('section');
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].classList.add('hidden');
-            }
-
-            // Mostra a seção correspondente ao ID do link clicado
-            var sectionToShow = document.getElementById(sectionId);
-            sectionToShow.classList.remove('hidden');
-        }
-    </script>
-
-    <script>
-        // Função para buscar o número de inscritos usando a API do YouTube
-        function getSubscriberCount() {
-            fetch('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCJhccCAmr6LSIsJvMx0U-BA&key=AIzaSyAOtDT-lUFQZYODpCAmkQHH5TfJ4305KQA')
-            .then(response => response.json())
-            .then(data => {
-                const subscriberCount = data.items[0].statistics.subscriberCount;
-                document.getElementById('subscriber-count').innerText = `Inscritos: ${subscriberCount}`;
-            })
-            .catch(error => console.error('Erro ao buscar o número de inscritos:', error));
-        }
-
-        // Função para buscar o vídeo mais recente usando a API do YouTube
-        function getLatestVideo() {
-            fetch('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCJhccCAmr6LSIsJvMx0U-BA&maxResults=1&type=video&key=AIzaSyAOtDT-lUFQZYODpCAmkQHH5TfJ4305KQA')
-            .then(response => response.json())
-            .then(data => {
-                const latestVideoId = data.items[0].id.videoId;
-                document.getElementById('latest-video').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${latestVideoId}" frameborder="0" allowfullscreen></iframe>`;
-            })
-            .catch(error => console.error('Erro ao buscar o último vídeo:', error));
-        }
-
-        // Chame as funções para exibir o vídeo mais recente e o número de inscritos quando a página carregar
-        window.onload = function() {
-            getLatestVideo();
-            getSubscriberCount();
-        };
-    </script>
+    <div class="social" id="social">
+        <a href="https://discord.gg/R59BsTpvVM" target="_blank">
+            <img src="discord.png" alt="Discord">
+        </a>
+        <a href="https://twitter.com/@jogosgo" target="_blank">
+            <img src="twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.youtube.com/@jogosgo" target="_blank">
+            <img src="youtube.png" alt="YouTube">
+        </a>
+        <a href="https://www.tiktok.com/@jogosgoficial" target="_blank">
+            <img src="tiktok.png" alt="TikTok">
+        </a>
+        <a href="https://instagram.com/jogosgo/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
-
