@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const API_KEY = 'AIzaSyCuMcIOKzM8ecZ9Yj4v9LQn7tfI2kAjupg';
     const CHANNEL_ID = 'UCJhccCAmr6LSIsJvMx0U-BA';
 
+    let clickCount = 0;
+    const profilePicture = document.getElementById('profile-picture');
+
+    profilePicture.addEventListener('click', () => {
+        clickCount++;
+        if (clickCount >= 10) {
+            window.location.href = 'login.html';
+        }
+    });
+
     // Function to fetch YouTube channel data
     async function fetchYouTubeData() {
         const channelResponse = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${CHANNEL_ID}&key=${API_KEY}`);
