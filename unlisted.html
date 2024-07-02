@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlisted Videos - JogosGo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .search-box {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .link-container {
+            text-align: center;
+        }
+        .link {
+            display: block;
+            margin: 10px 0;
+            font-size: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Unlisted Videos - JogosGo</div>
+    <div class="search-container">
+        <input type="text" id="searchBox" class="search-box" placeholder="Pesquisar...">
+    </div>
+    <div class="link-container" id="linkContainer">
+        <a class="link" href="https://www.exemplo.com" target="_blank">Exemplo</a>
+        <a class="link" href="https://www.youtube.com/watch?v=Mx6g7q0jCEM" target="_blank">SemNome.mp4 - Tela de Final teste</a>
+        <a class="link" href="https://www.youtube.com/watch?v=0eNMqoaUC6c" target="_blank">teste - Tela de Final Antigo teste</a>
+        <a class="link" href="https://youtu.be/ZfWMICd3eoM" target="_blank">Killer - Wuant But Its....</a>
+        <a class="link" href="https://youtu.be/71buq67Y2JM" target="_blank">IntroSpoiler.mp4</a>
+        <a class="link" href="https://youtu.be/vcax5Wfo_sY" target="_blank">SemNome.mp4</a>
+        <a class="link" href="https://youtu.be/jrgh-1Gzvz4" target="_blank">ToTorial</a>
+        <!-- Adicione mais links aqui -->
+    </div>
+    <a class="back-button" href="https://jogosgo.github.io/" target="_blank">Voltar ao site principal</a>
+
+    <script>
+        document.getElementById('searchBox').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let links = document.getElementsByClassName('link');
+            for (let i = 0; i < links.length; i++) {
+                let linkText = links[i].textContent.toLowerCase();
+                if (linkText.includes(filter)) {
+                    links[i].style.display = '';
+                } else {
+                    links[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
