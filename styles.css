@@ -31,6 +31,8 @@ a {
     align-items: center;
     padding: 20px;
     overflow-y: auto;
+    position: relative; /* To ensure blur doesn't affect this */
+    z-index: 1;
 }
 
 .profile-container {
@@ -103,6 +105,29 @@ a {
     font-size: 24px;
 }
 
+.about-section {
+    position: relative; /* Required to position the pseudo-element */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white;
+    height: 300px;
+    overflow: hidden;
+    background-blur: 5px; /* Optional: add blur effect */
+}
+
+.about-section h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section p {
+    position: relative;
+    z-index: 1;
+}
+
 .latest, .videos-section {
     background-color: #2e2e2e;
     padding: 20px;
@@ -161,6 +186,6 @@ a {
 }
 
 .social img {
-    width: 100px; /* Increase width by 80% */
-    height: 25px; /* Keep height the same */
+    width: 100px;
+    height: 25px;
 }
